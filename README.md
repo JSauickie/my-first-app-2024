@@ -51,6 +51,11 @@ run the unemployment report:
 python app/unemployment.py
 ```
 
-#API key used JCF4BFJGSNYM93RD
+
+Run the stocks report:
+
+```sh
+python app/stocks.py
+```
 
 
