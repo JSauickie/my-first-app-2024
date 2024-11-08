@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv() #looks in the .env for enviroment variables
 
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", default="demo")
- print(API_KEY)
+print(API_KEY)
 
 
 
