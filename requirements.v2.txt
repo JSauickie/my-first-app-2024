@@ -12,5 +12,3 @@ pytest
 
 sendgrid==6.5.0
 
-
-
