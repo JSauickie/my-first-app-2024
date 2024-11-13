@@ -59,3 +59,11 @@ python app/stocks.py
 ```
 
 
+## Testing
+
+Run tests:
+
+```sh
+pytest
+```
+

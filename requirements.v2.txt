@@ -8,3 +8,9 @@ pandas
 
 python-dotenv
 
+pytest
+
+sendgrid==6.5.0
+
+
+
