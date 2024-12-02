@@ -1,5 +1,3 @@
-# this is the "web_app/routes/home_routes.py" file...
-
 from flask import Blueprint, request, render_template
 
 home_routes = Blueprint("home_routes", __name__)
@@ -8,31 +6,27 @@ home_routes = Blueprint("home_routes", __name__)
 @home_routes.route("/home")
 def index():
     print("HOME...")
-    #return "Welcome Home"
-    return render_template("home.html")
+    return render_template("home.html")  # Serving the home page using a template
 
 @home_routes.route("/about")
 def about():
     print("ABOUT...")
-    #return "About Me"
-    return render_template("about.html")
+    return render_template("about.html")  # Serving the about page using a template
 
 @home_routes.route("/hello")
 def hello_world():
     print("HELLO...")
 
-    # if the request contains url params,
-    # for example a request to "/hello?name=Harper"
-    # the request.args property will hold the values in a dictionary-like structure
-    # can be empty like {} or full of params like {"name":"Harper"}
+    # Extract URL parameters
     url_params = dict(request.args)
     print("URL PARAMS:", url_params)
 
-    # access "name" key if present, otherwise use default value
+    # Use "name" parameter if provided, otherwise default to "World"
     name = url_params.get("name") or "World"
-
     message = f"Hello, {name}!"
 
+    # Passing values to the template
     x = 5
-    #return message
-    return render_template("hello.html", message=message, x=x, y = 20)
+    y = 20
+    return render_template("hello.html", message=message, x=x, y=y)  # Use the template for hello page
+
