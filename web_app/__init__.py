@@ -3,6 +3,7 @@ import os
 from flask import Flask
 from web_app.routes.home_routes import home_routes
 from web_app.routes.stocks_routes import stocks_routes
+from web_app.routes.unemployment_routes import unemployment_routes
 
 SECRET_KEY = os.getenv("SECRET_KEY", default="super secret")  # Ensure SECRET_KEY is set.
 
@@ -12,6 +13,8 @@ def create_app():
     app.config["SECRET_KEY"] = SECRET_KEY
     app.register_blueprint(home_routes)  # Register the home_routes blueprint.
     app.register_blueprint(stocks_routes)  # Register the stocks_routes blueprint.
+    app.register_blueprint(unemployment_routes)
+    
     return app
 
 if __name__ == "__main__":

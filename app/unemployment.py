@@ -37,6 +37,17 @@ def fetch_unemployment_json():
 
     return data
 
+def format_pct(value):
+    """
+    Converts a numeric value into a percentage string.
+
+    Args:
+        value (float): The numeric value to format as a percentage.
+
+    Returns:
+        str: A formatted string with a percent sign.
+    """
+    return f"{value:.2f}%"
 
 
 if __name__ == "__main__":
